@@ -1,18 +1,29 @@
+
+:root{
+	--color-a: white;
+	--color-b: #931420;
+	--color-c: #fffded;
+	--color-d: #f6bb73;
+	--color-e: #800000;
+	--color-f: yellow;
+	--color-g: black;
+}
+
 /* the styles for the elements */
 * {
 	margin: 0;
 	padding: 0;
 }
 html {
-	background-color: white;
+	background-color: var(--color-a);
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     width: 800px;
     margin: 0 auto;
-    border: 3px solid #931420;
-    background-color: #fffded;
+    border: 3px solid var(--color-b);
+    background-color: var(--color-c);
 }
 a:focus, a:hover {
 	font-style: italic;
@@ -20,19 +31,19 @@ a:focus, a:hover {
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
-	border-bottom: 3px solid #931420;
+	border-bottom: 3px solid var(--color-b);
 		background-image: -moz-linear-gradient(
-	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	    30deg, var(--color-d) 0%, var(--color-d) 30%, var(--color-a) 50%, var(--color-d) 80%, var(--color-d) 100%);
 	background-image: -webkit-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, var(--color-d) 0%, var(--color-c) 30%, var(--color-a) 50%, var(--color-c) 80%, var(--color-d) 100%);
 	background-image: -o-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, var(--color-d) 0%, var(--color-c) 30%, var(--color-a) 50%, var(--color-c) 80%, var(--color-d) 100%);
 	background-image: linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, var(--color-d) 0%, var(--color-c) 30%, var(--color-a) 50%, var(--color-c) 80%, var(--color-d) 100%);
 }
 header h2 {
 	font-size: 175%;
-	color: #800000;
+	color: var(--color-e);
 }
 header h3 {
 	font-size: 130%;
@@ -43,7 +54,7 @@ header img {
 	padding: 0 30px;
 }
 .shadow {
-	text-shadow: 2px 2px 2px #800000;
+	text-shadow: 2px 2px 2px var(--color-e);
 }
 /* the styles for the navigation menu */
 #nav_menu ul {
@@ -61,12 +72,12 @@ header img {
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
-    background-color: #800000;
-    color: white;
+    background-color: var(--color-e);
+    color: var(--color-a);
     font-weight: bold;
 }
 #nav_menu a.current {
-	color: yellow;
+	color: var(--color-f);
 }
 #nav_menu ul ul {
     display: none;
@@ -101,7 +112,7 @@ section h1 {
 	margin: 0;
 }
 section h2 {
-	color: #800000;
+	color: var(--color-e);
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
@@ -123,8 +134,8 @@ section li {
 /* the styles for the article */
 article {
 	padding: .5em 0;
-	border-top: 2px solid #800000;
-	border-bottom: 2px solid #800000;
+	border-top: 2px solid var(--color-e);
+	border-bottom: 2px solid var(--color-e);
 }
 article h2 {
 	padding-top: 0;
@@ -136,12 +147,13 @@ article h3 {
 article img {
 	float: right;
 	margin: .5em 0 1em 1em;
-	border: 1px solid black;
+	border: 1px solid var(--color-g);
 }
 article img:hover{
 	transition: transform 3s;
 	transform: rotate(720deg);
 	transform-origin: left top;
+	filter: grayscale();
 }
 
 /* the styles for the aside */
@@ -151,7 +163,7 @@ aside {
 	padding: 0 0 20px 20px;
 }
 aside h2 {
-	color: #800000;
+	color: var(--color-e);
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
@@ -165,6 +177,10 @@ aside img {
 	animation: moveAside 3s 2s 4 alternate;
 }
 
+aside img:hover{
+	filter: invert();
+}
+
 @keyframes moveAside {
 	to {
 		margin-left:100px;
@@ -176,12 +192,12 @@ aside img {
 
 /* the styles for the footer */
 footer {
-	background-color: #931420;
+	background-color: var(--color-b);
 	clear: both;
 
 }
 footer p {
 	text-align: center;
-	color: white;
+	color: var(--color-a);
 	padding: 1em 0;
 }
