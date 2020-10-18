@@ -200,4 +200,23 @@ input:focus{
 	transition: transform .3s;	
 	transform: scale(1.025);
 	background-color: rgb(211, 248, 255);
+	border-color: rgb(118, 186, 231);
+}
+.reset{
+	animation: animateFields 0.5s;
+}
+@keyframes animateFields {
+	from{
+		width:0px;
+	}
+	to{
+		width: 15em;
+	}
+}
+#submit:hover{
+	/* background: url("/town_hall_3/images/blue_green.gif") no-repeat; */
+	background-color: rgb(144, 167, 237);
+}
+#submit{
+	background-color: greenyellow;
 }

@@ -15,8 +15,8 @@
 	
 		var interval1,timeout1;
 	window.onload=function(){
-	 interval1=window.rInterval(function(){removeResets()},10000);
-	 timeout1=window.rtimeOut(function(){console.log('timeout1')},5000);
+	 interval1=window.rInterval(function(){removeResets()},500);
+	 timeout1=window.rtimeOut(function(){console.log('timeout1')},500);
 	}
 	
 	function removeResets() {
@@ -28,7 +28,7 @@
 		}
 	}
 	function addResets() {
-		element = document.querySelectorAll('input');
+		element = document.querySelectorAll('input[type=text]');
 		for (i = 0; i < element.length; i++ ) {
 		 element[i].classList.add("reset");
 		}
@@ -111,7 +111,7 @@
 						<option value="discover">Discover</option>
 					</select>
 					<label for="card-number">Card Number:</label>
-					<input type="text" name="card-number" id="card-number" pattern="\d{4}[\-]\d{4}[\-]\d{4}[\-]\d{4}" placeholder="XXXX-XXXX-XXXX-XXXX">
+					<input type="text" name="card-number" id="card-number" pattern="\d{4}[\-]\d{4}[\-]\d{4}[\-]\d{4}" placeholder="XXXX-XXXX-XXXX-XXXX"><br>
 					<label for="expiration-date">Expiration date:</label>
 					<select name="expiration-month" id="expiration-month">
 						<option value="jan">January</option>
