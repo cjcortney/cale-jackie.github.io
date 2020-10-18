@@ -47,8 +47,7 @@ header img {
 }
 /* the styles for the form */
 fieldset {
-	/* margin-top: 1em; */
-	
+    /* margin-top: 1em; */
     margin-bottom: .5em;
     padding: .5em 1em .5em 1em;
 }
@@ -72,13 +71,16 @@ input, select {
     margin-bottom: .5em;
 }
 input:required, input[required] {
-	border: 3px solid red;
+	border: 2px solid red;
+	color: #800000;
 }
 input:valid {
 	border: 1px solid black;
 }
 input:invalid {
 	box-shadow: none;
+	color: #800000;
+	border: 2px solid red;
 }
 br {
     clear: both;
@@ -173,4 +175,29 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+#bill, #cc{
+	width:auto;
+	margin-left: 3em;
+	margin-right: 2em;
+}
+#payment-methods{
+	float: none;
+}
+#expiration-month{
+	width: 7em;
+}
+#expiration-year{
+	width:5em;
+}
+svg{
+	fill: rgb(0,0,0);
+}
+svg:hover{
+	fill: #800000;
+}
+input:focus{
+	transition: transform .3s;	
+	transform: scale(1.025);
+	background-color: rgb(211, 248, 255);
 }
