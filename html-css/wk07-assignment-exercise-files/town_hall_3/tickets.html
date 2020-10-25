@@ -35,6 +35,28 @@ function addResets() {
 	
 }
 
+document.addEventListener("DOMContentLoaded", function tickets() {
+    document.getElementById("title").innerHTML = localStorage.getItem("title");
+    document.getElementById("date").innerHTML = localStorage.getItem("date");
+	document.getElementById("speaker").innerHTML = localStorage.getItem("speaker");
+	document.getElementById("speaker-information").value = JSON.stringify(localStorage);
+	let locationBox = document.getElementById("location");
+	window.navigator.geolocation.getCurrentPosition(
+		
+		function(position) {
+
+		location = {
+			latitude: position.coords.latitude,
+			longitude: position.coords.longitude
+		};
+
+		locationBox.value = JSON.stringify(location);
+		},
+		function(error) {
+		locationBox.value = JSON.stringify(location);
+	});
+})
+
 </script>
 </head>
 
@@ -63,10 +85,15 @@ function addResets() {
 	<main>
 		<section>
 			<h1>Order Form</h1>
+			<h1 id="title"></h1>
+			<h2 id="date"></h2>
+			<h3 id="speaker"></h3>
     		<form action="register_account.html" method="get"
-        		name="ticket-order-form" id="ticket-order-form">
+				name="ticket-order-form" id="ticket-order-form">
+				<input type="hidden" id="speaker-information" name="speaker-information">
+				<input type="hidden" id="location" name="location">
     			<fieldset>
-        			<legend>Member Information</legend>
+					<legend>Member Information</legend>
         			<label for="first_name">First Name:</label>
 					<input type="text" name="first_name" id="first_name" required><br>
 					<label for="last_name">Last Name:</label>
